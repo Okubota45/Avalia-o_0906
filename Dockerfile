@@ -1,7 +1,7 @@
-FROM php:8.0-apache
+FROM php:8.2-apache
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install mysql pdo pdo_mysql
 
-COPY ./scr/var/www/html/
+COPY ./var/www/html/
 
 EXPOSE 80
